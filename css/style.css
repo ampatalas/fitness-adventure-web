@@ -3,13 +3,18 @@
     padding: 0;
 }
 
+#phone-container {
+    position: relative;
+}
+
 .slideshow {
     height:  402px;
     width:   249px;
     padding: 0;
     margin:  0;
-    top:  50;
-    left: 33;
+    top:  50px;
+    left: 33px;
+    position: absolute;
 }
 
 .slideshow img {
