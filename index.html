@@ -1,0 +1,50 @@
+
+<!-- Jquery and Plug-ins -->
+<script src="js/lib/jquery-1.11.2.min.js"></script>
+<script src="js/plugin/jquery.cycle.all.js" /></script> <!-- Slideshow -->
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.slideshow').cycle({
+    	fx: "scrollLeft", 
+	});
+});
+</script>
+
+<style>
+.slideshow {  
+    height:  402px;  
+    width:   249px;  
+    padding: 0;  
+    margin:  0;
+    top:  50; 
+    left: 33;
+} 
+ 
+.slideshow img {
+	height: 402px;  
+    width:  auto; 
+    top:  0; 
+    left: 0;
+    position: absolute;
+}
+
+.slideshow-border {
+    z-index: 1000;
+    height: 500px;  
+    width:  auto; 
+    top:  0; 
+    left: 0;
+    position: absolute;
+}
+
+</style>
+
+<img src="images/demo-pl/_empty.png" class="slideshow-border">
+<div class="slideshow" style="position: absolute;">
+	<img src="images/demo-pl/logo_clear.png">
+	<img src="images/demo-pl/register_clear.png">
+	<img src="images/demo-pl/menu_clear.png">
+	<img src="images/demo-pl/plot_clear.png">
+	<img src="images/demo-pl/achievement_clear.png">
+</div>
