@@ -8,6 +8,15 @@ body {
     padding-bottom: 20px;
 }
 
+img {
+    display: block;
+    margin: 0px auto;
+}
+
+#google-play-icon {
+    margin: 0px;
+}
+
 .slideshow {
     height:  402px;
     width:   249px;
@@ -32,11 +41,11 @@ body {
     width:  auto;
     top:  0;
     left: 0;
-    position: absolute;
 }
 
-#phone-container {
+.phone-container {
     position: relative;
+    margin-bottom: 50px;
 }
 
 .anchor {
