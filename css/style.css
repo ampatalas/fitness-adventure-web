@@ -13,6 +13,13 @@ img {
     margin: 0px auto;
 }
 
+html,body {height:100%;}
+.special,.special .jumbotron {height:100%;}
+
+p > span {
+    font-weight: bold;
+}
+
 #google-play-icon {
     margin: 0px;
 }
