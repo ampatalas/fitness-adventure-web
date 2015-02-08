@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitnessAdventure - Character Class Quiz</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <!--<link rel="icon" type="image/x-icon" href="" />-->
+    <!-- Jquery and Plug-ins -->
+    <script src="js/lib/jquery-1.11.2.min.js"></script>
+    <script src="js/plugin/jquery.cycle.all.js"></script>
+</head>
+<body>
+
+<script>
+function handleClick() {
+    var amountWarrior = 0;
+    var amountRogue = 0;
+    var amountMage = 0;
+    var amountHealer = 0;
+    for (var i = 1; i <= 6; i++) {
+        var radios = document.getElementsByName('question' + i);
+        for (var j = 0; j < radios.length; j++) {
+            var radio = radios[j];
+            if (radio.value == "Warrior" && radio.checked) {
+                amountWarrior++;
+            }
+            if (radio.value == "Rogue" && radio.checked) {
+                amountRogue++;
+            }
+            if (radio.value == "Mage" && radio.checked) {
+                amountMage++;
+            }
+            if (radio.value == "Healer" && radio.checked) {
+                amountHealer++;
+            }
+        }
+    }
+
+    var resultArray = [amountWarrior, amountRogue, amountMage, amountHealer];
+    var resultClass = ["Warrior", "Rogue", "Mage", "Healer"];
+    var i = resultArray.indexOf(Math.max.apply(Math, resultArray));
+    var result = resultClass[i];
+
+    alert("Pick: " + result);
+    return false;
+}
+</script>
+
+<div id="quiz">
+    <form>
+        <p>
+        1. Pytanie 1</br>
+        <input type="radio" name="question1" value="Warrior">Odpowiedź bardzo Warrior.</br>
+        <input type="radio" name="question1" value="Rogue">Odpowiedź bardzo Rogue.</br>
+        <input type="radio" name="question1" value="Mage">Odpowiedź bardzo Mag.</br>
+        <input type="radio" name="question1" value="Healer">Odpowiedź bardzo Healer.</br>
+        </p>
+
+        <p>
+        2. Pytanie 2</br>
+        <input type="radio" name="question2" value="Warrior">Odpowiedź bardzo Warrior.</br>
+        <input type="radio" name="question2" value="Rogue">Odpowiedź bardzo Rogue.</br>
+        <input type="radio" name="question2" value="Mage">Odpowiedź bardzo Mag.</br>
+        <input type="radio" name="question2" value="Healer">Odpowiedź bardzo Healer.</br>
+        </p>
+
+        <p>
+        3. Pytanie 3</br>
+        <input type="radio" name="question3" value="Warrior">Odpowiedź bardzo Warrior.</br>
+        <input type="radio" name="question3" value="Rogue">Odpowiedź bardzo Rogue.</br>
+        <input type="radio" name="question3" value="Mage">Odpowiedź bardzo Mag.</br>
+        <input type="radio" name="question3" value="Healer">Odpowiedź bardzo Healer.</br>
+        </p>
+
+        <p>
+        4. Pytanie 4</br>
+        <input type="radio" name="question4" value="Warrior">Odpowiedź bardzo Warrior.</br>
+        <input type="radio" name="question4" value="Rogue">Odpowiedź bardzo Rogue.</br>
+        <input type="radio" name="question4" value="Mage">Odpowiedź bardzo Mag.</br>
+        <input type="radio" name="question4" value="Healer">Odpowiedź bardzo Healer.</br>
+        </p>
+
+        <p>
+        5. Pytanie 5</br>
+        <input type="radio" name="question5" value="Warrior">Odpowiedź bardzo Warrior.</br>
+        <input type="radio" name="question5" value="Rogue">Odpowiedź bardzo Rogue.</br>
+        <input type="radio" name="question5" value="Mage">Odpowiedź bardzo Mag.</br>
+        <input type="radio" name="question5" value="Healer">Odpowiedź bardzo Healer.</br>
+        </p>
+
+        <p>
+        6. Pytanie 6</br>
+        <input type="radio" name="question6" value="Warrior">Odpowiedź bardzo Warrior.</br>
+        <input type="radio" name="question6" value="Rogue">Odpowiedź bardzo Rogue.</br>
+        <input type="radio" name="question6" value="Mage">Odpowiedź bardzo Mag.</br>
+        <input type="radio" name="question6" value="Healer">Odpowiedź bardzo Healer.</br>
+        </p>
+
+        <button class="submit" onclick="return handleClick();" type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

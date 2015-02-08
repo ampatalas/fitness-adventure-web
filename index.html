@@ -9,7 +9,7 @@
 
     <style>
         .jumbotron {
-            background: url('images/background_map.png') no-repeat center center;
+            background: url('images/MAPHQ.jpg') no-repeat center center;
         }
     </style>
 </head>
@@ -43,7 +43,19 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron special">
     <div class="container">
-        <h1 class="header-title">Your Quest begins now.</h1>
+    <div id="phone-container" class="col-md-4">
+                <img src="images/demo-pl/_empty.png" class="slideshow-border">
+
+                <div class="slideshow" >
+                    <img src="images/demo-eng/logo_clear.png">
+                    <img src="images/demo-eng/register_clear.png">
+                    <img src="images/demo-eng/menu_clear.png">
+                    <img src="images/demo-eng/plot_clear.png">
+                    <img src="images/demo-eng/achievement_clear.png">
+                </div>
+            </div>
+    
+        <div class="col-md-8"><h1 class="header-title">Your Quest begins now.</h1>
 
         <p style="color: white; ">Jump start your new lifestyle and battle the laziness - both in game and in real
             life.</p>
@@ -52,6 +64,10 @@
             <img id="google-play-icon" alt="Android app on Google Play"
                  src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png"/>
         </a></p>
+        </div>
+
+
+            
     </div>
 </div>
 
@@ -98,8 +114,8 @@
 
     <hr class="featurette-divider" id="game">
 
-    <div class="row featurette anchor" >
-        <div class="col-md-7">
+    <div class="row featurette anchor" id="world" >
+        <div class="col-md-7" >
             <h2 class="featurette-heading">Discover whole new world. <span
                     class="text-muted">Tell your own story.</span></h2>
 
@@ -110,35 +126,16 @@
                 land of Fitness!</p>
         </div>
         <div class="col-md-5">
-            <div id="phone-container">
-                <img src="images/demo-pl/_empty.png" class="slideshow-border">
-
-                <div class="slideshow">
-                    <img src="images/demo-pl/logo_clear.png">
-                    <img src="images/demo-pl/register_clear.png">
-                    <img src="images/demo-pl/menu_clear.png">
-                    <img src="images/demo-pl/plot_clear.png">
-                    <img src="images/demo-pl/achievement_clear.png">
-                </div>
-            </div>
+            <img src="images/features/1.png">
         </div>
+        
     </div>
 
     <hr class="featurette-divider">
 
     <div class="row featurette anchor">
         <div class="col-md-5">
-            <div id="phone-container">
-                <img src="images/demo-pl/_empty.png" class="slideshow-border">
-
-                <div class="slideshow">
-                    <img src="images/demo-pl/logo_clear.png">
-                    <img src="images/demo-pl/register_clear.png">
-                    <img src="images/demo-pl/menu_clear.png">
-                    <img src="images/demo-pl/plot_clear.png">
-                    <img src="images/demo-pl/achievement_clear.png">
-                </div>
-            </div>
+            <img src="images/features/2.png">
         </div>
         <div class="col-md-7">
             <h2 class="featurette-heading">Track your progress. <span class="text-muted">See how others going.</span>
@@ -166,37 +163,30 @@
                 pool.</p>
         </div>
         <div class="col-md-5">
-            <div id="phone-container">
-                <img src="images/demo-pl/_empty.png" class="slideshow-border">
-
-                <div class="slideshow">
-                    <img src="images/demo-pl/logo_clear.png">
-                    <img src="images/demo-pl/register_clear.png">
-                    <img src="images/demo-pl/menu_clear.png">
-                    <img src="images/demo-pl/plot_clear.png">
-                    <img src="images/demo-pl/achievement_clear.png">
-                </div>
-            </div>
+            <img src="images/features/3.png">
         </div>
     </div>
 
     <hr class="featurette-divider" id="developers">
 
     <div class="row featurette anchor">
-        <div class="col-md-12">
 
-            <h2 class="featurette-heading">Become our hero. <span class="text-muted">Join our team.</span></h2>
+        <div class="col-md-12">
+            <h2>Become our hero. <span class="text-muted">Join our team.</span></h2>
 
             <p class="lead">If you have soul of an <span>artist</span>, you are friendly with <span>PHP</span>, or you
-                are passionate about programming <span>mobile applications</span>, contact us at <a href="mailto:heroes@fitness-adventure.com">heroes@fitness-adventure.com</a>.</p>
+                are passionate about programming <span>mobile applications</span>, contact us at <a href="mailto:heroes@fitness-adventure.com">heroes@fitness-adventure.com</a>.
+            </p>
+
+            <img src="images/join.png">
 
         </div>
     </div>
-
-    <footer>
-        <p>&copy; FitnessAdventure 2015</p>
-    </footer>
 </div>
+
+<footer id="footer">
+    <p>&copy; FitnessAdventure 2015</p>
+</footer>
 
 <!--<link rel="icon" type="image/x-icon" href="" />-->
 <!-- Jquery and Plug-ins -->
@@ -206,7 +196,8 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('.slideshow').cycle({
-            fx: "scrollLeft"
+            fx: "scrollLeft",
+            delay: -1000,
         });
     });
 </script>
